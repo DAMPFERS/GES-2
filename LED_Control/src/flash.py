@@ -189,7 +189,7 @@ def main() -> int:
         return 0
 
     port = choose_port(args.port)
-    board_options = "cpu=atmega328p" if args.new_bootloader else DEFAULT_BOARD_OPTIONS
+    board_options = "cpu=atmega328" if args.new_bootloader else DEFAULT_BOARD_OPTIONS
     fqbn = f"{args.fqbn}:{board_options}" if args.fqbn == DEFAULT_FQBN else args.fqbn
 
     if not args.no_install:
